@@ -2,122 +2,44 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# About Me
 
-[Link to another page](./another-page.html).
+I am a Senior Researcher in the [Reinforcement Learning Group](https://www.microsoft.com/en-us/research/group/reinforcement-learning-redmond/) at Microsoft Research in Redmond, WA. I previously obtained a PhD in Computer Science from the University of Texas at Austin advised by Professor [Peter Stone](https://www.cs.utexas.edu/~pstone/).
 
-There should be whitespace between paragraphs.
+_I work at the intersection of deep learning and reinforcement learning to develop autonomous agents capable of adapting and learning in complex environments._
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+# Open Source Software
 
-# Header 1
+I've built or contributed significantly to the following open-source projects:
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+|[<img src="/assets/img/jericho.png" width="400" align="right">](https://github.com/microsoft/jericho) | [Jericho](https://github.com/microsoft/jericho) is a lightweight python-based interface connecting learning agents with interactive fiction games. It serves as a testbed for benchmarking progress of language-based agents on man-made text games. [BlogPost](https://www.microsoft.com/en-us/research/blog/by-making-text-based-games-more-accessible-to-rl-agents-jericho-framework-opens-up-exciting-natural-language-challenges/) |
+|[<img src="/assets/img/hfo.png" width="400" align="right">](https://github.com/LARG/HFO) | [Half Field Offense](https://github.com/LARG/HFO) (HFO) is a multiagent subtask in RoboCup simulated soccer, modeling a situation in which the offense of one team has to get past the defense of the opposition in order to shoot goals. |
+| [<img src="/assets/img/qbert.png" width="400" align="right">](https://github.com/mgbellemare/Arcade-Learning-Environment) | [Arcade Learning Environment](https://github.com/mgbellemare/Arcade-Learning-Environment) (ALE) Is a well known platform for training learning agents to play Atari games. I developed the first external interface to ALE which allowed the environment to be used as a library. |
 
-## Header 2
+# Publications
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+| <img src="/assets/img/WMG.png" width="400" align="right"> | **[Working Memory Graphs](https://arxiv.org/abs/1911.07141)**<br/>R Loynd, R Fernandez, A Celikyilmaz, A Swaminathan, **M Hausknecht**. _International Conference on Machine Learning (ICML) 2020_<br/>[[Code](https://github.com/microsoft/wmg_agent)] |
+| <img src="/assets/img/zhan20.PNG" width="200" align="right"> | **[Learning Calibratable Policies using Programmatic Style-Consistency](https://arxiv.org/abs/1910.01179)**<br/>E Zhan, A Tseng, Y Yue, A Swaminathan, **M Hausknecht**. _International Conference on Machine Learning (ICML) 2020_ |
+| <img src="/assets/img/ammanabrolu20.png" width="300" align="right"> | **[Graph Constrained Reinforcement Learning for Natural Language Action Spaces](https://arxiv.org/abs/2001.08837)**<br/>P Ammanabrolu, **M Hausknecht**. _International Conference on Learning Representations (ICLR) 2020_<br/>[[Code](https://github.com/rajammanabrolu/KG-A2C)] |
+| <img src="/assets/img/colossal20.png" width="400" align="right"> |**[Interactive Fiction Games: A Colossal Adventure](https://arxiv.org/abs/1909.05398)**<br/>**M Hausknecht**, P Ammanabrolu, M Cote, X Yuan. _Association for the Advancement of Artificial Intelligence (AAAI) 2020_<br/>[[Code](https://github.com/microsoft/tdqn)]|
+| <img src="/assets/img/scripnet19.png" width="400" align="right"> | **[Scriptnet: Neural static analysis for malicious javascript detection](https://arxiv.org/abs/1904.01126)**<br/>J Stokes, R Agrawal, G McDonald, **M Hausknecht**._IEEE Military Communications Conference (MILCOM) 2019_ |
+| <img src="/assets/img/nail19.png" width="400" align="right"> | **[Nail: A general interactive fiction agent](https://arxiv.org/abs/1902.04259)**<br/>**M Hausknecht**, R Loynd, G Yang, A Swaminathan, JD Williams._Technical Report 2019_<br/>[[Code](https://github.com/microsoft/nail_agent)] |
+| <img src="/assets/img/counting18.png" width="400" align="right"> | **[Counting to Explore and Generalize in Text-based Games](https://arxiv.org/abs/1806.11525)**<br/>X Yuan, M Cote, A Sordoni, R Laroche, R Tachet des Combes, **M Hausknecht**, A Trischler. _European Workshop on Reinforcement Learning (EWRL) 2018_|
+| <img src="/assets/img/tw18-2.png" width="400" align="right"> | **[TextWorld: A Learning Environment for Text-based Games](https://arxiv.org/abs/1806.11532)**<br/>M Cote, A Kadar, X Yuan, B Kybartas, T Barnes, E Fine, J Moore, **M Hausknecht**, L Asri, M Adada, W Tay, A Trischler. _IJCAI/ICML Computer Games Workshop 2018_<br/>[[Code](https://github.com/microsoft/TextWorld)] |
+| <img src="/assets/img/leveraging18.png" width="400" align="right"> | **[Leveraging grammar and reinforcement learning for neural program synthesis](https://arxiv.org/abs/1805.04276)**<br/>R Bunel, **M Hausknecht**, J Devlin, R Singh, P Kohli. _International Conference on Learning Representations (ICLR) 2018_ |
+| <img src="/assets/img/revisiting17.png" width="400" align="right"> | **[Revisiting the arcade learning environment: Evaluation protocols and open problems for general agents](https://arxiv.org/abs/1709.06009)**<br/>MC Machado, MG Bellemare, E Talvitie, J Veness, **M Hausknecht**, M Bowling. _International Joint Conferences on Artificial Intelligence (IJCAI) 2017_ |
+| <img src="/assets/img/neural17.png" width="400" align="right"> | **[Neural Program Meta-Induction](https://arxiv.org/abs/1710.04157)**<br/>J Devlin, RR Bunel, R Singh, **M Hausknecht**, P Kohli._Advances in Neural Information Processing Systems (NeurIPS) 2017_ |
+| <img src="/assets/img/cooperation16.png" width="400" align="right"> | **[Cooperation and communication in multiagent deep reinforcement learning](https://repositories.lib.utexas.edu/handle/2152/45681)**<br/>**Matthew Hausknecht**. _PhD Thesis_ 2016 |
+| <img src="/assets/img/hfo.png" width="400" align="right"> | **[Half field offense: An environment for multiagent learning and ad hoc teamwork](http://www.cs.utexas.edu/~AustinVilla/sim/halffieldoffense/)**<br/>**M Hausknecht**, P Mupparaju, S Subramanian, S Kalyanakrishnan, P Stone. _AAMAS Adaptive Learning Agents (ALA) Workshop 2016_ |
+| <img src="/assets/img/onpolicy16.png" width="400" align="right"> | **[On-policy vs. off-policy updates for deep reinforcement learning](https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/DeepRL16-hausknecht.pdf)**<br/>**M Hausknecht**, P Stone._Deep Reinforcement Learning: Frontiers and Challenges, (IJCAI) Workshop 2016_ |
+| <img src="/assets/img/parameterized16.png" width="400" align="right"> | **[Deep Reinforcement Learning in Parameterized Action Space](https://arxiv.org/abs/1511.04143)**<br/>**M Hausknecht**, P Stone. _Proceedings of the International Conference on Learning Representations (ICLR) 2016_<br/>[[Code](https://github.com/mhauskn/dqn-hfo)] |
+| <img src="/assets/img/cerebellum16.png" width="400" align="right"> | **[Machine Learning Capabilities of a Simulated Cerebellum](http://www.cs.utexas.edu/users/ai-lab/?hausknecht:tnnls16)**<br/>**M Hausknecht**, W Li, M Mauk, and P Stone. _IEEE Transactions on Neural Networks and Learning Systems (TNNLS) 2016_ |
+| <img src="/assets/img/drqn15.png" width="400" align="right"> | **[Deep Recurrent Q-Learning for Partially Observable MDPs](https://arxiv.org/abs/1507.06527)**<br/>**M Hausknecht**, P Stone. _AAAI Fall Symposium on Sequential Decision Making for Intelligent Agents 2015_ |
+| <img src="/assets/img/beyond15.png" width="400" align="right"> | **[Beyond Short Snippets: Deep Networks for Video Classification](https://arxiv.org/abs/1503.08909)**<br/>J Ng, **M Hausknecht**, S Vijayanarasimhan, O Vinyals, R Monga, G Toderici. _Conference on Computer Vision and Pattern Recognition (CVPR) 2015_|
+| <img src="/assets/img/neuroevolution14.png" width="400" align="right"> | **[A Neuroevolution Approach to General Atari Game Playing](https://www.cs.utexas.edu/~pstone/Papers/bib2html/b2hd-TCIAIG13-mhauskn.html)**<br/>**M Hausknecht**, J Lehman, R Miikkulainen, and P Stone. _IEEE Transactions on Computational Intelligence and AI in Games (TCIAIG) 2014_ |
+| <img src="/assets/img/cerebellum12.png" width="400" align="right"> | **[Using a million cell simulation of the cerebellum: Network scaling and task generality](https://www.cs.utexas.edu/~pstone/Papers/bib2html/b2hd-NeuralNets12-Li.html)**<br/>W Li, **M Hausknecht**, P Stone, and M Mauk. _Neural Networks 2012_ |
+| <img src="/assets/img/hyperneat12.png" width="400" align="right"> | **[HyperNEAT-GGP: A HyperNEAT-based Atari General Game Player](http://nn.cs.utexas.edu/downloads/papers/hausknecht.gecco12.pdf)**<br/>**M Hausknecht**, P Khandelwal, R Miikkulainen, and P Stone. _Proceedings of Genetic and Evolutionary Computation Conference (GECCO) 2012_ |
+| <img src="/assets/img/dynamic11.png" width="400" align="right"> | **[Dynamic Lane Reversal in Traffic Management](http://www.cs.utexas.edu/~aim/papers/ITSC11-hausknecht.pdf)**<br/>**M Hausknecht**, T Au, P Stone, D Fajardo, and T Waller. _Proceedings of IEEE Intelligent Transportation Systems Conference (ITSC) 2011_|
+| <img src="/assets/img/aim11.png" width="400" align="right"> | **[Autonomous Intersection Management: Multi-Intersection Optimization](http://www.cs.utexas.edu/~aim/papers/IROS11-hausknecht.pdf)**<br/>**M Hausknecht**, T Au, and P Stone. _IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2011_|
+| <img src="/assets/img/aibo10.png" width="400" align="right"> | **[Learning Powerful Kicks on the Aibo ERS-7: The Quest for a Striker](http://www.cs.utexas.edu/users/ai-lab/?hausknecht:robocup10)**<br/>**M Hausknecht**, P Stone. _Proceedings of the RoboCup International Symposium 2010_ |
+| <img src="/assets/img/nail09.png" width="400" align="right"> | **[For want of a nail: How absences cause events](https://www.decisionneurosciencelab.org/pdfs/Wolff%20et%20al.%20(submitted).pdf)**<br/>P Wolff, A Barbey, **M Hausknecht**. _Journal of Experimental Psychology: General 2009_|
