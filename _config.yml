@@ -1,3 +1,6 @@
+plugins:
+  - jekyll-seo-tag
+
 title: Matthew Hausknecht
 logo: /assets/img/bio-photo.jpg
 description: Machine Learning Researcher
