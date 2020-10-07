@@ -18,6 +18,7 @@ I've built or contributed significantly to the following open-source projects:
 
 # Publications
 
+| <img src="/assets/img/calm.png" width="400" align="right"> | **[Keep CALM and Explore: Language Models for Action Generation in Text-based Games](https://arxiv.org/abs/2010.02903)**<br/>S Yao, R Rao, **M Hausknecht**, K Narasimhan. _Empirical Methods in Natural Language Processing (EMNLP) 2020_<br/>[[Code](https://github.com/princeton-nlp/calm-textgame)] |
 | <img src="/assets/img/WMG.png" width="400" align="right"> | **[Working Memory Graphs](https://arxiv.org/abs/1911.07141)**<br/>R Loynd, R Fernandez, A Celikyilmaz, A Swaminathan, **M Hausknecht**. _International Conference on Machine Learning (ICML) 2020_<br/>[[Code](https://github.com/microsoft/wmg_agent)] |
 | <img src="/assets/img/zhan20.PNG" width="200" align="right"> | **[Learning Calibratable Policies using Programmatic Style-Consistency](https://arxiv.org/abs/1910.01179)**<br/>E Zhan, A Tseng, Y Yue, A Swaminathan, **M Hausknecht**. _International Conference on Machine Learning (ICML) 2020_ |
 | <img src="/assets/img/ammanabrolu20.png" width="300" align="right"> | **[Graph Constrained Reinforcement Learning for Natural Language Action Spaces](https://arxiv.org/abs/2001.08837)**<br/>P Ammanabrolu, **M Hausknecht**. _International Conference on Learning Representations (ICLR) 2020_<br/>[[Code](https://github.com/rajammanabrolu/KG-A2C)] |
