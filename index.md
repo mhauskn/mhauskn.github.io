@@ -4,9 +4,9 @@ layout: default
 
 # About Me
 
-I am a Senior Researcher in the [Reinforcement Learning Group](https://www.microsoft.com/en-us/research/group/reinforcement-learning-redmond/) at Microsoft Research in Redmond, WA. I previously obtained a PhD in Computer Science from the University of Texas at Austin advised by Professor [Peter Stone](https://www.cs.utexas.edu/~pstone/).
+I am a Staff Scientist at [Argo AI](https://www.argo.ai/) working on autonomy for self-driving vehicles. Previously, I was a Senior Researcher in the [Reinforcement Learning Group](https://www.microsoft.com/en-us/research/group/reinforcement-learning-redmond/) at Microsoft Research in Redmond, WA. I previously obtained a PhD in Computer Science from the University of Texas at Austin advised by Professor [Peter Stone](https://www.cs.utexas.edu/~pstone/).
 
-_I work at the intersection of deep learning and reinforcement learning to develop autonomous agents capable of adapting and learning in complex environments._
+_I work at the intersection of deep learning and reinforcement learning to develop autonomy capable of adapting and learning in complex environments._
 
 # Open Source Software
 
