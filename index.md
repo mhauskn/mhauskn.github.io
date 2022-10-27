@@ -4,11 +4,12 @@ layout: default
 
 # About Me
 
+**I am currently looking for new opportunities.**
+
 I was a Staff Scientist at [Argo AI](https://www.argo.ai/) improving autonomy for self-driving vehicles. Before that I was a researcher at Microsoft Research in Redmond, WA. I previously obtained a PhD in Computer Science from the University of Texas at Austin advised by Professor [Peter Stone](https://www.cs.utexas.edu/~pstone/).
 
 _I work at the intersection of deep learning and reinforcement learning to develop autonomy capable of adapting and learning in complex environments._
 
-*I am currently looking for new opportunities.*
 
 # Open Source Software
 
@@ -20,7 +21,7 @@ I've built or contributed significantly to the following open-source projects:
 
 # Publications
 
-| <img src="/assets/img/unimask.png" width="400" align="right"> | **Uni[Mask]: Unified Inference in Sequential Decision Problems**<br/>M Carroll, O Paradise, J Lin, R Georgescu, M Sun, D Bignell, S Milani, K Hofmann, **M Hausknecht**, A Dragan, S Devlin. _2022 Conference on Neural Information Processing Systems (NeurIPS Oral)_<br/> |
+| <img src="/assets/img/unimask.PNG" width="400" align="right"> | **Uni[Mask]: Unified Inference in Sequential Decision Problems**<br/>M Carroll, O Paradise, J Lin, R Georgescu, M Sun, D Bignell, S Milani, K Hofmann, **M Hausknecht**, A Dragan, S Devlin. _2022 Conference on Neural Information Processing Systems (NeurIPS Oral)_<br/> |
 | <img src="/assets/img/MoCapAct.png" width="400" align="right"> | **[MoCapAct: A Multi-Task Dataset for Simulated Humanoid Control](https://arxiv.org/abs/2208.07363)**<br/>N Wagener, A Kolobov, F Frujeri, R Loynd, C Cheng, **M Hausknecht**. _2022 Conference on Neural Information Processing Systems: Datasets and Benchmarks Track (NeurIPS)_<br/>[[Webpage](https://microsoft.github.io/MoCapAct/)] |
 | <img src="/assets/img/reading21.png" width="400" align="right"> | **[Reading and Acting while Blindfolded: The Need for Semantics in Text Game Agents](https://arxiv.org/abs/2103.13552)**<br/>S Yao, K Narasimhan, **M Hausknecht**. _2021 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)_<br/>[[BlogPost](https://www.microsoft.com/en-us/research/blog/building-stronger-semantic-understanding-into-text-game-reinforcement-learning-agents/)] |
 | <img src="/assets/img/alfworld.png" width="400" align="right"> | **[ALFWorld: Aligning Text and Embodied Environments for Interactive Learning](https://arxiv.org/abs/2010.03768)**<br/>M Shridhar, X Yuan, M Côté, Y Bisk, A Trischler, **M Hausknecht**. _International Conference on Learning Representations (ICLR) 2021_<br/>[[Webpage](https://alfworld.github.io/)] |
