@@ -11,14 +11,6 @@ I was a Staff Scientist at [Argo AI](https://www.argo.ai/) improving autonomy fo
 _I work at the intersection of deep learning and reinforcement learning to develop autonomy capable of adapting and learning in complex environments._
 
 
-# Open Source Software
-
-I've built or contributed significantly to the following open-source projects:
-
-|[<img src="/assets/img/jericho.png" width="400" align="right">](https://github.com/microsoft/jericho) | [Jericho](https://github.com/microsoft/jericho) is a lightweight python-based interface connecting learning agents with interactive fiction games. It serves as a testbed for benchmarking progress of language-based agents on man-made text games. [BlogPost](https://www.microsoft.com/en-us/research/blog/by-making-text-based-games-more-accessible-to-rl-agents-jericho-framework-opens-up-exciting-natural-language-challenges/) |
-|[<img src="/assets/img/hfo.png" width="400" align="right">](https://github.com/LARG/HFO) | [Half Field Offense](https://github.com/LARG/HFO) (HFO) is a multiagent subtask in RoboCup simulated soccer, modeling a situation in which the offense of one team has to get past the defense of the opposition in order to shoot goals. |
-| [<img src="/assets/img/qbert.png" width="400" align="right">](https://github.com/mgbellemare/Arcade-Learning-Environment) | [Arcade Learning Environment](https://github.com/mgbellemare/Arcade-Learning-Environment) (ALE) Is a well known platform for training learning agents to play Atari games. I developed the first external interface to ALE which allowed the environment to be used as a library. |
-
 # Publications
 
 | <img src="/assets/img/unimask.PNG" width="400" align="right"> | **[Uni[Mask]: Unified Inference in Sequential Decision Problems](https://arxiv.org/abs/2211.10869)**<br/>M Carroll, O Paradise, J Lin, R Georgescu, M Sun, D Bignell, S Milani, K Hofmann, **M Hausknecht**, A Dragan, S Devlin. _2022 Conference on Neural Information Processing Systems (NeurIPS Oral)_<br/> |
@@ -52,3 +44,12 @@ I've built or contributed significantly to the following open-source projects:
 | <img src="/assets/img/aim11.png" width="400" align="right"> | **[Autonomous Intersection Management: Multi-Intersection Optimization](http://www.cs.utexas.edu/~aim/papers/IROS11-hausknecht.pdf)**<br/>**M Hausknecht**, T Au, and P Stone. _IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2011_|
 | <img src="/assets/img/aibo10.png" width="400" align="right"> | **[Learning Powerful Kicks on the Aibo ERS-7: The Quest for a Striker](http://www.cs.utexas.edu/users/ai-lab/?hausknecht:robocup10)**<br/>**M Hausknecht**, P Stone. _Proceedings of the RoboCup International Symposium 2010_ |
 | <img src="/assets/img/nail09.png" width="400" align="right"> | **[For want of a nail: How absences cause events](https://www.decisionneurosciencelab.org/pdfs/Wolff%20et%20al.%20(submitted).pdf)**<br/>P Wolff, A Barbey, **M Hausknecht**. _Journal of Experimental Psychology: General 2009_|
+
+
+# Open Source Software
+
+I've built or contributed significantly to the following open-source projects:
+
+|[<img src="/assets/img/jericho.png" width="400" align="right">](https://github.com/microsoft/jericho) | [Jericho](https://github.com/microsoft/jericho) is a lightweight python-based interface connecting learning agents with interactive fiction games. It serves as a testbed for benchmarking progress of language-based agents on man-made text games. [BlogPost](https://www.microsoft.com/en-us/research/blog/by-making-text-based-games-more-accessible-to-rl-agents-jericho-framework-opens-up-exciting-natural-language-challenges/) |
+|[<img src="/assets/img/hfo.png" width="400" align="right">](https://github.com/LARG/HFO) | [Half Field Offense](https://github.com/LARG/HFO) (HFO) is a multiagent subtask in RoboCup simulated soccer, modeling a situation in which the offense of one team has to get past the defense of the opposition in order to shoot goals. |
+| [<img src="/assets/img/qbert.png" width="400" align="right">](https://github.com/mgbellemare/Arcade-Learning-Environment) | [Arcade Learning Environment](https://github.com/mgbellemare/Arcade-Learning-Environment) (ALE) Is a well known platform for training learning agents to play Atari games. I developed the first external interface to ALE which allowed the environment to be used as a library. |
