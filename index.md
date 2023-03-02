@@ -4,7 +4,7 @@ layout: default
 
 # About Me
 
-I was a Staff Scientist at [Argo AI](https://www.argo.ai/) improving autonomy for self-driving vehicles. Before that I was a researcher at Microsoft Research in Redmond, WA. I previously obtained a PhD in Computer Science from the University of Texas at Austin advised by Professor [Peter Stone](https://www.cs.utexas.edu/~pstone/).
+I am a staff scientist at Latitude AI focusing on improving autonomy for self-driving vehicles. Before that I was a researcher at Microsoft Research in Redmond, WA. I previously obtained a PhD in Computer Science from the University of Texas at Austin advised by Professor [Peter Stone](https://www.cs.utexas.edu/~pstone/).
 
 _I work at the intersection of deep learning and reinforcement learning to develop autonomy capable of adapting and learning in complex environments._
 
