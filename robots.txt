@@ -1,0 +1,5 @@
+# Welcome — humans, crawlers, and agents alike.
+# A structured summary of this site lives at /llms.txt
+
+User-agent: *
+Allow: /
