@@ -116,6 +116,26 @@
     margin: 0 0 22px;
   }
   .prompt .caret { color: var(--accent); font-weight: 700; }
+  .prompt { cursor: text; }
+  #term-in {
+    display: inline;
+    outline: none;
+    caret-color: transparent;
+    color: var(--ink);
+    word-break: break-word;
+  }
+  #term-in:empty::before { content: attr(data-placeholder); color: var(--muted); }
+  .term-out {
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin: -6px 0 20px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  .term-out:empty { display: none; }
+  .term-out .echo { color: var(--accent); }
   .prompt .cursor {
     display: inline-block;
     width: 8px; height: 15px;
@@ -305,7 +325,8 @@
   <header class="masthead">
     <div>
       <h1>Matthew Hausknecht</h1>
-      <p class="prompt"><span class="caret">&gt;</span> agents that learn continually and work reliably<span class="cursor"></span></p>
+      <p class="prompt" id="prompt-line"><span class="caret">&gt;</span> <span id="term-in" contenteditable="true" role="textbox" spellcheck="false" enterkeyhint="send" aria-label="Command prompt — type 'help' and press Enter" data-placeholder="agents that learn continually and work reliably"></span><span class="cursor"></span></p>
+      <div id="term-out" class="term-out" aria-live="polite"></div>
       <ul class="linkrow">
         <li><a href="mailto:matthew.hausknecht@gmail.com">email</a></li>
         <li><a href="/assets/files/CV.pdf">cv</a></li>
@@ -489,5 +510,157 @@
     <span>© 2026 · plain html, no framework</span>
   </footer>
 </div>
+<script>
+(function () {
+  var input = document.getElementById('term-in');
+  var out = document.getElementById('term-out');
+  var root = document.documentElement;
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var xyzzyCount = 0;
+  var game = null;
+
+  function print(text, cls) {
+    text.split('\n').forEach(function (line) {
+      var div = document.createElement('div');
+      div.textContent = line;
+      if (cls) div.className = cls;
+      out.appendChild(div);
+    });
+    while (out.children.length > 40) out.removeChild(out.firstChild);
+  }
+  function goTo(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+  }
+  function open(url) { window.open(url, '_blank', 'noopener'); }
+
+  /* ---- a very small adventure ---- */
+  var rooms = {
+    arcade: {
+      desc: 'THE ARCADE (2012). Rows of Atari cabinets strobe in the dark.\nIn the corner, a neural network is teaching itself Frogger.\nObvious exits: NORTH.',
+      n: 'library'
+    },
+    library: {
+      desc: 'THE LIBRARY OF INTERACTIVE FICTION (2019). Ten thousand text\nadventures line the shelves. A brass lantern flickers beside a\nmachine reading Zork, slowly. Obvious exits: NORTH, SOUTH.',
+      n: 'garage', s: 'arcade'
+    },
+    garage: {
+      desc: 'THE GARAGE (2022). A self-driving car idles, dreaming of lane\nchanges. Obvious exits: NORTH, SOUTH.',
+      n: 'lab', s: 'library'
+    },
+    lab: {
+      desc: 'THE LAB (now). Pareto frontiers bloom across the monitors while\nan agent quietly updates itself. On the desk: a CV.\nObvious exits: SOUTH.',
+      s: 'garage'
+    }
+  };
+
+  function playGame(cmd) {
+    var w = cmd.replace(/^go\s+/, '');
+    if (w === 'n' || w === 'north') w = 'n';
+    if (w === 's' || w === 'south') w = 's';
+    if (w === 'n' || w === 's') {
+      var next = rooms[game.room][w];
+      if (next) { game.room = next; print(rooms[next].desc); }
+      else print('You can’t go that way.');
+    } else if (w === 'look' || w === 'l') {
+      print(rooms[game.room].desc);
+    } else if (w === 'i' || w === 'inventory') {
+      print('You are carrying: curiosity.');
+    } else if ((/^(take|get)\b/).test(w)) {
+      if (game.room === 'lab' && (/cv|resume/).test(w)) {
+        print('Taken.\n*** You have won ***\n(opening the CV…)');
+        game = null;
+        open('/assets/files/CV.pdf');
+      } else print('You can’t see any such thing.');
+    } else if (w === 'help') {
+      print('N, S, LOOK, TAKE <thing>, INVENTORY, QUIT.');
+    } else if (w === 'quit' || w === 'q') {
+      game = null;
+      print('You wake at the top of a personal website. It was all real.');
+    } else if (w === 'xyzzy') {
+      print('Nothing happens. (Wrong cave.)');
+    } else {
+      print('I don’t know the word “' + w.split(' ')[0] + '”.');
+    }
+  }
+
+  function handle(cmd) {
+    if (game) return playGame(cmd);
+    var arg = cmd.split(/\s+/).slice(1).join(' ');
+    switch (cmd.split(/\s+/)[0]) {
+      case 'help': case '?':
+        print('commands: about · papers · news · software · cv · email · github ·\nscholar · linkedin · ls · dark · light · clear · play\nthere may also be a magic word.');
+        break;
+      case 'look': case 'l':
+        print('You are at the top of a small, hand-built website. Below you:\nfifteen years of research on agents that learn. A prompt blinks,\nexpectantly.');
+        break;
+      case 'about': case 'whoami': goTo('about'); print('Principal AI Researcher at DataRobot. Scrolling…'); break;
+      case 'papers': case 'publications': case 'pubs': goTo('selected'); print('32 papers, 2009–2025. Six selected. Scrolling…'); break;
+      case 'news': goTo('news'); print('Scrolling…'); break;
+      case 'software': case 'code': goTo('software'); print('Scrolling…'); break;
+      case 'cv': case 'resume': print('Opening CV…'); open('/assets/files/CV.pdf'); break;
+      case 'email': case 'contact': print('matthew.hausknecht@gmail.com — opening mail client…'); window.location.href = 'mailto:matthew.hausknecht@gmail.com'; break;
+      case 'github': case 'gh': print('Opening GitHub…'); open('https://github.com/mhauskn'); break;
+      case 'scholar': print('Opening Google Scholar…'); open('https://scholar.google.com/citations?user=lutJce0AAAAJ'); break;
+      case 'linkedin': print('Opening LinkedIn…'); open('https://www.linkedin.com/in/matthew-hausknecht-19918b73'); break;
+      case 'dark': root.dataset.theme = 'dark'; print('Lights off.'); break;
+      case 'light': root.dataset.theme = 'light'; print('Lights on.'); break;
+      case 'theme': root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark'; print('Toggled.'); break;
+      case 'clear': case 'cls': out.textContent = ''; break;
+      case 'ls': print('about/  news/  publications/  software/  cv.pdf'); break;
+      case 'cd':
+        if (!arg || arg === '~' || arg === '/') { window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' }); print('~'); }
+        else { var id = { about: 'about', news: 'news', publications: 'publications', papers: 'selected', software: 'software' }[arg.replace(/\/$/, '')]; if (id) { goTo(id); print('Scrolling…'); } else print('cd: no such section: ' + arg); }
+        break;
+      case 'date': print(new Date().toDateString()); break;
+      case 'echo': print(arg || ''); break;
+      case 'hello': case 'hi': case 'hey': print('Hello. Type “help” if you’re lost, or “play” if you’re not busy.'); break;
+      case 'sudo': print('Permission denied. (This incident will not be reported.)'); break;
+      case 'rm': print('I’d rather keep existing, thanks.'); break;
+      case 'xyzzy':
+        xyzzyCount++;
+        print(xyzzyCount === 1 ? 'Nothing happens.' : xyzzyCount === 2 ? 'Really — nothing happens.' : 'A hollow voice says: “Fool.”');
+        break;
+      case 'plugh': print('A hollow voice says: “plugh”.'); break;
+      case 'play': case 'zork': case 'adventure':
+        game = { room: 'arcade' };
+        print('A VERY SMALL ADVENTURE — fifteen years in four rooms.\nCommands: N, S, LOOK, TAKE, QUIT.\n');
+        print(rooms.arcade.desc);
+        break;
+      default:
+        print('I don’t know the word “' + cmd.split(/\s+/)[0] + '”. (try: help)');
+    }
+  }
+
+  function submit() {
+    var cmd = input.textContent.replace(/\u00a0/g, ' ').trim();
+    input.textContent = '';
+    if (!cmd) return;
+    print('> ' + cmd, 'echo');
+    handle(cmd.toLowerCase());
+  }
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      submit();
+    } else if (e.key === 'Escape') {
+      input.blur();
+    }
+  });
+  input.addEventListener('beforeinput', function (e) {
+    if (e.inputType === 'insertParagraph' || e.inputType === 'insertLineBreak') {
+      e.preventDefault();
+      submit();
+    }
+  });
+  document.getElementById('prompt-line').addEventListener('click', function () { input.focus(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== input && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      e.preventDefault();
+      input.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>
